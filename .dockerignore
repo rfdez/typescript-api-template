@@ -1,0 +1,16 @@
+node_modules
+dist
+coverage
+tests
+.github
+.git
+.dockerignore
+Dockerfile
+.editorconfig
+.eslintrc
+.gitignore
+.npmrc
+jest.config.js
+LICENSE
+README.md
+tsconfig.eslint.json

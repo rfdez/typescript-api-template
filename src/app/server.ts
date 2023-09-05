@@ -2,7 +2,7 @@ import { debug } from "node:console";
 
 import app from "./app";
 
-const port = process.env.PORT ?? 3000;
+const port = process.env.PORT ?? 8080;
 
 const server = app.listen(port, () => {
 	debug(`App listening on port ${port}`);

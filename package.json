@@ -30,7 +30,7 @@
 		"pnpm": ">=8.0.0"
 	},
 	"private": true,
-	"main": "src/app/server.js",
+	"main": "dist/src/app/server.js",
 	"scripts": {
 		"dev": "NODE_ENV=development nodemon src/app/server.ts",
 		"build": "tsc",

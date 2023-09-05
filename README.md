@@ -1,6 +1,6 @@
 # [WIP] Typescript API Template
 
-In this repository you will find a template for creating a Typescript backend project. It includes the entrypoint of the application and the testing framework and linter already configured.
+In this repository you will find a template for creating a Typescript backend project. It includes the entrypoint of the application, the testing framework and linter and docker already configured.
 
 ## 📄 Features
 
@@ -12,6 +12,7 @@ In this repository you will find a template for creating a Typescript backend pr
   - With [Supertest](https://github.com/ladjs/supertest) for testing HTTP requests
 - [ESLint](https://eslint.org/) for linting
 - [Prettier](https://prettier.io/) for code formatting
+- [Docker](https://www.docker.com/) for containerization
 - [Github Actions](https://github.com/features/actions) for CI (Continuous Integration)
 
 ## 🚀 Getting Started
@@ -28,6 +29,16 @@ pnpm run build
 
 # Run the application in production mode
 pnpm start
+```
+
+## 🐳 Docker
+
+```shell
+# Build the image
+docker build -t <owner>/typescript-api-template:<tag> .
+
+# Run the container
+docker run --rm -p 8080:8080 <owner>/typescript-api-template:<tag>
 ```
 
 ## 🧪 Testing

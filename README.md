@@ -1,6 +1,6 @@
 # [WIP] Typescript API Template
 
-In this repository you will find a template for creating a Typescript backend project. It includes the entrypoint of the application, the testing framework and linter and docker already configured.
+In this repository you will find a template for creating a Typescript backend project. It includes the entrypoint of the application, the testing framework, linter and docker already configured.
 
 ## 📄 Features
 

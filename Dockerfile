@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1
 FROM node:18-slim AS base
 
 ENV PNPM_HOME="/pnpm"
@@ -9,6 +10,7 @@ WORKDIR /usr/src/app
 
 COPY package.json pnpm-lock.yaml ./
 
+
 FROM base AS deps
 
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
@@ -16,13 +18,16 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-l
 
 FROM base AS build
 
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+
 COPY . .
 
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile \
-	&& pnpm run build
+RUN pnpm run build
 
 
 FROM base
+
+NODE_ENV=production
 
 USER node
 

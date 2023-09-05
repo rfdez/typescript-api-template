@@ -27,7 +27,7 @@ RUN pnpm run build
 
 FROM base
 
-NODE_ENV=production
+ENV NODE_ENV="production"
 
 USER node
 

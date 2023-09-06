@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  lint:
+  test:
     name: 🧪 Test code
     runs-on: ubuntu-latest
     env:
